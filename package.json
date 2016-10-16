@@ -1,0 +1,19 @@
+{
+  "name": "webkit-sassui-layout-tmb",
+  "version": "0.0.0",
+  "description": "webkit sass ui module layout hd/bd/ft.",
+  "homepage": "https://github.com/afeiship/webkit-sassui-layout-tmb",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "yargs": "^4.7.1"
+  }
+}

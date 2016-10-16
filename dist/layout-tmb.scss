@@ -1,0 +1,32 @@
+/*webkit-sassui-layout-tmb Start*/
+.webkit-sassui-layout-tmb {
+  position: relative;
+
+  > * {
+    position: absolute;
+    width: 100%;
+  }
+
+  > .hd {
+    top: 0;
+  }
+
+  > .ft {
+    bottom: 0;
+  }
+}
+@mixin layout-tmb($inHdHeight,$inFtHeight:0) {
+  > .hd {
+    height: $inHdHeight;
+  }
+
+  > .bd {
+    top: $inHdHeight;
+    bottom: $inFtHeight;
+  }
+
+  > .ft {
+    height: $inFtHeight;
+  }
+}
+/*webkit-sassui-layout-tmb End*/

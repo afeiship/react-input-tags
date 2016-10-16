@@ -1,0 +1,43 @@
+/*webkit-sassui-layout-tmb Start*/
+.webkit-sassui-layout-tmb {
+  position: relative;
+}
+
+.webkit-sassui-layout-tmb > * {
+  position: absolute;
+  width: 100%;
+}
+
+.webkit-sassui-layout-tmb > .hd {
+  top: 0;
+}
+
+.webkit-sassui-layout-tmb > .ft {
+  bottom: 0;
+}
+
+/*webkit-sassui-layout-tmb End*/
+.test-layout-tmb > .hd {
+  height: 100px;
+}
+
+.test-layout-tmb > .bd {
+  top: 100px;
+  bottom: 200px;
+}
+
+.test-layout-tmb > .ft {
+  height: 200px;
+}
+
+.test-layout-tmb .hd {
+  background: pink;
+}
+
+.test-layout-tmb .bd {
+  background: gray;
+}
+
+.test-layout-tmb .ft {
+  background: green;
+}
