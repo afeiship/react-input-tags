@@ -17,17 +17,21 @@
 }
 
 /*webkit-sassui-layout-tmb End*/
+.test-layout-tmb {
+  min-height: 500px;
+}
+
 .test-layout-tmb > .hd {
   height: 100px;
 }
 
 .test-layout-tmb > .bd {
   top: 100px;
-  bottom: 200px;
+  bottom: 80px;
 }
 
 .test-layout-tmb > .ft {
-  height: 200px;
+  height: 80px;
 }
 
 .test-layout-tmb .hd {

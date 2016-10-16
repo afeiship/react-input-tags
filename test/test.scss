@@ -1,6 +1,7 @@
 @import "../dist/layout-tmb.scss";
 .test-layout-tmb{
-  @include layout-tmb(100px,200px);
+  @include layout-tmb(100px,80px);
+  min-height:500px;
   .hd{
     background: pink;
   }
