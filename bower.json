@@ -25,5 +25,8 @@
     "test",
     "tests",
     "src"
-  ]
+  ],
+  "dependencies": {
+    "webkit-sass-mixins": "afeiship/webkit-sass-mixins"
+  }
 }

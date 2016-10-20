@@ -33,7 +33,26 @@ h3{
   min-height:200px;
 }
 
-.webkit-sassui-layout-tmb-position3{
-  @include webkit-sassui-layout-tmb-position(60px,auto,50px);
-  min-height:200px;
+.webkit-sassui-layout-tmb-flex3{
+  @include webkit-sassui-layout-tmb-flex(60px,auto,50px);
+}
+
+.webkit-sassui-layout-tmb-flex1{
+  @include webkit-sassui-layout-tmb-flex(100px,auto,auto);
+  min-height: 300px;
+}
+
+.webkit-sassui-layout-tmb-flex2{
+  @include webkit-sassui-layout-tmb-flex(auto,auto,100px);
+  min-height: 300px;
+}
+
+.webkit-sassui-layout-tmb-flex3{
+  @include webkit-sassui-layout-tmb-flex(100px,auto,50px);
+  min-height: 300px;
+}
+
+.webkit-sassui-layout-tmb-flex4{
+  @include webkit-sassui-layout-tmb-flex(auto,auto,auto);
+  min-height: 300px;
 }

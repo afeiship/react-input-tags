@@ -1,21 +1,107 @@
 /*webkit-sassui-layout-tmb Start*/
-.webkit-sassui-layout-tmb-position, .webkit-sassui-layout-tmb-position1, .webkit-sassui-layout-tmb-position2, .webkit-sassui-layout-tmb-position3 {
+/*animation Start*/
+/*animation End*/
+/*appearance Start*/
+/*appearance End*/
+/*backface-visibility Start*/
+/*backface-visibility End*/
+/*background Start*/
+/*background End*/
+/*border-radius Start*/
+/*border-radius End*/
+/*box-shadow Start*/
+/*box-shadow End*/
+/*box-sizing Start*/
+/*box-sizing End*/
+/*clearfix Start*/
+/*clearfix End*/
+/*content-columns Start*/
+/*content-columns End*/
+/*dib-grid Start*/
+/*dib-grid End*/
+/*filter Start*/
+/*filter End*/
+/*flexbox Start*/
+/*flexbox End*/
+/*flip Start*/
+/*flip End*/
+/*height Start*/
+/*height End*/
+/*margin Start*/
+/*margin End*/
+/*padding Start*/
+/*padding End*/
+/*placeholder Start*/
+/*placeholder End*/
+/*size Start*/
+/*size End*/
+/*tap-highlight-transparent Start*/
+/*tap-highlight-transparent End*/
+/*text-size-adjust Start*/
+/*text-size-adjust End*/
+/*touch-callout Start*/
+/*touch-callout End*/
+/*transformation Start*/
+/*transformation End*/
+/*transition Start*/
+/*transition End*/
+/**
+ * @desc  triangle
+ * @param $width
+ * @param $height
+ * @param $color
+ * @param $direction: top bottom left right
+ */
+/**
+ * @desc Use svg
+ */
+/*user-select Start*/
+/*user-select End*/
+/*width Start*/
+/*width End*/
+.webkit-sassui-layout-tmb-position, .webkit-sassui-layout-tmb-position1, .webkit-sassui-layout-tmb-position2 {
   position: relative;
 }
 
-.webkit-sassui-layout-tmb-position > .hd, .webkit-sassui-layout-tmb-position1 > .hd, .webkit-sassui-layout-tmb-position2 > .hd, .webkit-sassui-layout-tmb-position3 > .hd,
-.webkit-sassui-layout-tmb-position > .bd, .webkit-sassui-layout-tmb-position1 > .bd, .webkit-sassui-layout-tmb-position2 > .bd, .webkit-sassui-layout-tmb-position3 > .bd,
-.webkit-sassui-layout-tmb-position > .ft, .webkit-sassui-layout-tmb-position1 > .ft, .webkit-sassui-layout-tmb-position2 > .ft, .webkit-sassui-layout-tmb-position3 > .ft {
+.webkit-sassui-layout-tmb-position > .hd, .webkit-sassui-layout-tmb-position1 > .hd, .webkit-sassui-layout-tmb-position2 > .hd,
+.webkit-sassui-layout-tmb-position > .bd, .webkit-sassui-layout-tmb-position1 > .bd, .webkit-sassui-layout-tmb-position2 > .bd,
+.webkit-sassui-layout-tmb-position > .ft, .webkit-sassui-layout-tmb-position1 > .ft, .webkit-sassui-layout-tmb-position2 > .ft {
   position: absolute;
   width: 100%;
 }
 
-.webkit-sassui-layout-tmb-position > .hd, .webkit-sassui-layout-tmb-position1 > .hd, .webkit-sassui-layout-tmb-position2 > .hd, .webkit-sassui-layout-tmb-position3 > .hd {
+.webkit-sassui-layout-tmb-position > .hd, .webkit-sassui-layout-tmb-position1 > .hd, .webkit-sassui-layout-tmb-position2 > .hd {
   top: 0;
 }
 
-.webkit-sassui-layout-tmb-position > .ft, .webkit-sassui-layout-tmb-position1 > .ft, .webkit-sassui-layout-tmb-position2 > .ft, .webkit-sassui-layout-tmb-position3 > .ft {
+.webkit-sassui-layout-tmb-position > .ft, .webkit-sassui-layout-tmb-position1 > .ft, .webkit-sassui-layout-tmb-position2 > .ft {
   bottom: 0;
+}
+
+.webkit-sassui-layout-tmb-flex, .webkit-sassui-layout-tmb-flex3, .webkit-sassui-layout-tmb-flex1, .webkit-sassui-layout-tmb-flex2, .webkit-sassui-layout-tmb-flex4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.webkit-sassui-layout-tmb-flex > .hd, .webkit-sassui-layout-tmb-flex3 > .hd, .webkit-sassui-layout-tmb-flex1 > .hd, .webkit-sassui-layout-tmb-flex2 > .hd, .webkit-sassui-layout-tmb-flex4 > .hd,
+.webkit-sassui-layout-tmb-flex > .bd, .webkit-sassui-layout-tmb-flex3 > .bd, .webkit-sassui-layout-tmb-flex1 > .bd, .webkit-sassui-layout-tmb-flex2 > .bd, .webkit-sassui-layout-tmb-flex4 > .bd,
+.webkit-sassui-layout-tmb-flex > .ft, .webkit-sassui-layout-tmb-flex3 > .ft, .webkit-sassui-layout-tmb-flex1 > .ft, .webkit-sassui-layout-tmb-flex2 > .ft, .webkit-sassui-layout-tmb-flex4 > .ft {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 /*webkit-sassui-layout-tmb End*/
@@ -84,19 +170,78 @@ h3 {
   height: 60px;
 }
 
-.webkit-sassui-layout-tmb-position3 {
-  min-height: 200px;
-}
-
-.webkit-sassui-layout-tmb-position3 > .hd {
+.webkit-sassui-layout-tmb-flex3 > .hd {
   height: 60px;
 }
 
-.webkit-sassui-layout-tmb-position3 > .bd {
-  top: 60px;
-  bottom: 50px;
+.webkit-sassui-layout-tmb-flex3 > .bd {
+  height: auto;
 }
 
-.webkit-sassui-layout-tmb-position3 > .ft {
+.webkit-sassui-layout-tmb-flex3 > .ft {
   height: 50px;
+}
+
+.webkit-sassui-layout-tmb-flex1 {
+  min-height: 300px;
+}
+
+.webkit-sassui-layout-tmb-flex1 > .hd {
+  height: 100px;
+}
+
+.webkit-sassui-layout-tmb-flex1 > .bd {
+  height: auto;
+}
+
+.webkit-sassui-layout-tmb-flex1 > .ft {
+  height: auto;
+}
+
+.webkit-sassui-layout-tmb-flex2 {
+  min-height: 300px;
+}
+
+.webkit-sassui-layout-tmb-flex2 > .hd {
+  height: auto;
+}
+
+.webkit-sassui-layout-tmb-flex2 > .bd {
+  height: auto;
+}
+
+.webkit-sassui-layout-tmb-flex2 > .ft {
+  height: 100px;
+}
+
+.webkit-sassui-layout-tmb-flex3 {
+  min-height: 300px;
+}
+
+.webkit-sassui-layout-tmb-flex3 > .hd {
+  height: 100px;
+}
+
+.webkit-sassui-layout-tmb-flex3 > .bd {
+  height: auto;
+}
+
+.webkit-sassui-layout-tmb-flex3 > .ft {
+  height: 50px;
+}
+
+.webkit-sassui-layout-tmb-flex4 {
+  min-height: 300px;
+}
+
+.webkit-sassui-layout-tmb-flex4 > .hd {
+  height: auto;
+}
+
+.webkit-sassui-layout-tmb-flex4 > .bd {
+  height: auto;
+}
+
+.webkit-sassui-layout-tmb-flex4 > .ft {
+  height: auto;
 }
