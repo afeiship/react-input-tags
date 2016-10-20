@@ -1,14 +1,39 @@
-@import "../dist/layout-tmb.scss";
-.test-layout-tmb{
-  @include layout-tmb(100px,80px);
-  min-height:500px;
-  .hd{
-    background: pink;
-  }
-  .bd{
-    background: gray;
-  }
-  .ft{
-    background: green;
-  }
+@import "../dist/webkit-sassui-layout-tmb.scss";
+html,body{
+  height:100%;
+}
+body{
+  font-size: 14px;
+}
+h2{
+  border-left: 3px solid #ccc;
+  padding-left: 10px;
+}
+h3{
+  color:#999;
+  font-size: 14px;
+  font-weight: normal;
+}
+.hd{
+  background: pink;
+}
+.bd{
+  background: gray;
+}
+.ft{
+  background: green;
+}
+.webkit-sassui-layout-tmb-position1{
+  @include webkit-sassui-layout-tmb-position(60px,auto,auto);
+  min-height:200px;
+}
+
+.webkit-sassui-layout-tmb-position2{
+  @include webkit-sassui-layout-tmb-position(auto,auto,60px);
+  min-height:200px;
+}
+
+.webkit-sassui-layout-tmb-position3{
+  @include webkit-sassui-layout-tmb-position(60px,auto,50px);
+  min-height:200px;
 }

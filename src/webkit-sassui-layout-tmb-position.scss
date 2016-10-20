@@ -1,0 +1,47 @@
+/*webkit-sassui-layout-tmb Start*/
+.webkit-sassui-layout-tmb-position {
+  position: relative;
+  > .hd,
+  > .bd,
+  > .ft, {
+    position: absolute;
+    width: 100%;
+  }
+
+  > .hd {
+    top: 0;
+  }
+
+  > .ft {
+    bottom: 0;
+  }
+}
+
+.webkit-sassui-layout-tmb-flex {
+
+}
+
+
+
+@mixin webkit-sassui-layout-tmb-position($inHdHeight:auto,$inBdHeight:auto,$inFtHeight:auto) {
+  @extend .webkit-sassui-layout-tmb-position;
+  @if $inHdHeight==auto {
+    $inHdHeight:0;
+  }
+  @if $inFtHeight==auto {
+    $inFtHeight:0;
+  }
+  > .hd {
+    height: $inHdHeight;
+  }
+
+  > .bd {
+    top: $inHdHeight;
+    bottom: $inFtHeight;
+  }
+
+  > .ft {
+    height: $inFtHeight;
+  }
+}
+/*webkit-sassui-layout-tmb End*/
