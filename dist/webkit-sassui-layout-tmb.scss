@@ -1,5 +1,5 @@
 /*webkit-sassui-layout-tmb Start*/
-@import "../bower_components/webkit-sass-mixins/dist/webkit-sass-mixins.scss";
+@import "bower_components/webkit-sass-mixins/dist/webkit-sass-mixins.scss";
 .webkit-sassui-layout-tmb-position {
   position: relative;
   > .hd,
@@ -27,7 +27,6 @@
     @include flex;
   }
 }
-
 
 @mixin webkit-sassui-layout-tmb-position($inHdHeight:auto,$inBdHeight:auto,$inFtHeight:auto) {
   @extend .webkit-sassui-layout-tmb-position;
