@@ -245,3 +245,34 @@ h3 {
 .webkit-sassui-layout-tmb-flex4 > .ft {
   height: auto;
 }
+
+.webkit-sassui-layout-tb-flex5 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  -o-box-pack: justify;
+  box-pack: justify;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  o-box-orient: vertical;
+  o-ms-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+}
+
+.webkit-sassui-layout-tb-flex5 > .hd {
+  height: 50px;
+}
+
+.webkit-sassui-layout-tb-flex5 > .ft {
+  height: 20px;
+}

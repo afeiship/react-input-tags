@@ -28,6 +28,22 @@
   }
 }
 
+
+@mixin webkit-sassui-layout-tb-flex($inHdHeight,$inFtHeight) {
+  @include display-box;
+  @include box-pack(justify);
+  @include box-orient(vertical);
+  @include box-flex(1);
+
+  >.hd{
+    height:$inHdHeight;
+  }
+
+  >.ft{
+    height: $inFtHeight;
+  }
+}
+
 @mixin webkit-sassui-layout-tmb-position($inHdHeight:auto,$inBdHeight:auto,$inFtHeight:auto) {
   @extend .webkit-sassui-layout-tmb-position;
   @if $inHdHeight==auto {

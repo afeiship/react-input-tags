@@ -1,0 +1,107 @@
+/*webkit-sassui-layout-tmb Start*/
+/*animation Start*/
+/*animation End*/
+/*appearance Start*/
+/*appearance End*/
+/*backface-visibility Start*/
+/*backface-visibility End*/
+/*background Start*/
+/*background End*/
+/*border-radius Start*/
+/*border-radius End*/
+/*box-shadow Start*/
+/*box-shadow End*/
+/*box-sizing Start*/
+/*box-sizing End*/
+/*clearfix Start*/
+/*clearfix End*/
+/*content-columns Start*/
+/*content-columns End*/
+/*dib-grid Start*/
+/*dib-grid End*/
+/*filter Start*/
+/*filter End*/
+/*flexbox Start*/
+/*flexbox End*/
+/*flip Start*/
+/*flip End*/
+/*height Start*/
+/*height End*/
+/*margin Start*/
+/*margin End*/
+/*padding Start*/
+/*padding End*/
+/*placeholder Start*/
+/*placeholder End*/
+/*size Start*/
+/*size End*/
+/*tap-highlight-transparent Start*/
+/*tap-highlight-transparent End*/
+/*text-size-adjust Start*/
+/*text-size-adjust End*/
+/*touch-callout Start*/
+/*touch-callout End*/
+/*transformation Start*/
+/*transformation End*/
+/*transition Start*/
+/*transition End*/
+/**
+ * @desc  triangle
+ * @param $width
+ * @param $height
+ * @param $color
+ * @param $direction: top bottom left right
+ */
+/**
+ * @desc Use svg
+ */
+/*user-select Start*/
+/*user-select End*/
+/*width Start*/
+/*width End*/
+.webkit-sassui-layout-tmb-position {
+  position: relative;
+}
+
+.webkit-sassui-layout-tmb-position > .hd,
+.webkit-sassui-layout-tmb-position > .bd,
+.webkit-sassui-layout-tmb-position > .ft {
+  position: absolute;
+  width: 100%;
+}
+
+.webkit-sassui-layout-tmb-position > .hd {
+  top: 0;
+}
+
+.webkit-sassui-layout-tmb-position > .ft {
+  bottom: 0;
+}
+
+.webkit-sassui-layout-tmb-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.webkit-sassui-layout-tmb-flex > .hd,
+.webkit-sassui-layout-tmb-flex > .bd,
+.webkit-sassui-layout-tmb-flex > .ft {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/*webkit-sassui-layout-tmb End*/

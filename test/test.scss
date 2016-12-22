@@ -56,3 +56,7 @@ h3{
   @include webkit-sassui-layout-tmb-flex(auto,auto,auto);
   min-height: 300px;
 }
+
+.webkit-sassui-layout-tb-flex5{
+  @include webkit-sassui-layout-tb-flex(50px,20px);
+}
