@@ -2,28 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border: 1px solid #eee;
-  outline: 1px solid transparent;
-  transition: all 0.3s ease-in-out;
-  padding: 4px;
-  border-radius: 4px;
-  gap: 3px;
-
   &[data-disabled=true] {
     opacity: 0.6;
     cursor: not-allowed;
   }
 
-  //not disabled
-  &:not([data-disabled="true"]) {
-    border-color: #4096ff;
-    outline-color: lighten(#4096ff, 10%);
-  }
-
   &__tag {
     display: inline-flex;
-    padding: 2px 4px;
-    border-radius: 6px;
   }
 
   &__input {
@@ -32,6 +17,5 @@
     background: none;
     outline: none;
     width: 100px;
-    height: 26px;
   }
 }

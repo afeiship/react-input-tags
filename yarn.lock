@@ -534,6 +534,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@jswork/class-imperative-handle@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmmirror.com/@jswork/class-imperative-handle/-/class-imperative-handle-1.0.1.tgz#858314d14782260e9697747b8aadebe7515eab4c"
+  integrity sha512-Wqc5I+EWgC2OPeStj91vVzQlBVRgrnMzZsrC4+OemTnLcnV56Og7oeupubRupTGtJNIPDO47+InbpuLMvAlcoA==
+
 "@jswork/next-array-replace@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmmirror.com/@jswork/next-array-replace/-/next-array-replace-1.0.0.tgz#f06991681fb2a42190b9ce6f428d13bee6f2390f"
@@ -567,6 +572,15 @@
     "@jswork/tailwind-lc" "^1.0.4"
     "@jswork/tailwind-shortcuts" "^1.0.20"
     "@jswork/tailwind-width" "^1.0.4"
+
+"@jswork/react-list@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.npmmirror.com/@jswork/react-list/-/react-list-1.2.3.tgz#227efd2079bec7901bfcb225b450b8d84e854d7a"
+  integrity sha512-HhBwrbttYGmlEhlReBOsYGPE7iOeJezt9fnO9bDiKpl+XVBSJjylz+3Z8NrTvcQkkvdUu2swtVrMHzk71a60Lg==
+  dependencies:
+    "@jswork/class-imperative-handle" "^1.0.1"
+    "@jswork/noop" "^1.0.0"
+    classnames "^2.2.6"
 
 "@jswork/simple-date-format@^1.0.5":
   version "1.0.5"
@@ -1170,7 +1184,7 @@ chalk@^4.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-classnames@^2.5.1:
+classnames@^2.2.6, classnames@^2.5.1:
   version "2.5.1"
   resolved "https://registry.npmmirror.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
   integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import noop from '@jswork/noop';
 import cx from 'classnames';
 import fde from 'fast-deep-equal';
+import RcList, { ReactListProps, TemplateArgs } from '@jswork/react-list';
 
 const CLASS_NAME = 'react-input-tags';
 const TRIGGER_KEYS = ['Tab', 'Enter', 'Space'];
@@ -11,10 +12,36 @@ type StdEventTarget = { target: { value: any } };
 type StdCallback = (inEvent: StdEventTarget) => void;
 
 type Props = {
+  /**
+   * The CSS class name of the root element.
+   * @default ''
+   */
   className?: string;
+  /**
+   * The initial items of the input.
+   * @default []
+   */
   items?: string[];
+  /**
+   *  Whether the input is disabled.
+   *  @default false
+   */
   disabled?: boolean;
+  /**
+   * The callback function when the input value changes.
+   * @default noop
+   */
   onChange?: StdCallback;
+  /**
+   * The template function for rendering each tag.
+   * @default (args, cb) => <span className="tag">{args.item}</span>
+   */
+  templateTag: (args: TemplateArgs, cb: () => void) => ReactNode;
+  /**
+   * The props of the list component.
+   * @default {}
+   */
+  listPros?: ReactListProps
 } & React.HTMLAttributes<HTMLDivElement>;
 
 type State = {
@@ -29,7 +56,7 @@ export default class AcInputTags extends React.Component<Props, State> {
   static defaultProps = {
     items: [],
     disabled: false,
-    onChange: noop
+    onChange: noop,
   };
 
   inputRef = React.createRef<HTMLInputElement>();
@@ -40,7 +67,7 @@ export default class AcInputTags extends React.Component<Props, State> {
     this.state = {
       items,
       isComposite: false,
-      inputValue: ''
+      inputValue: '',
     };
   }
 
@@ -80,7 +107,6 @@ export default class AcInputTags extends React.Component<Props, State> {
   };
 
   handleTagRemove = (inIndex, inForce?: boolean) => {
-    // todo: add close icon on tag
     const { disabled } = this.props;
     const { items, inputValue } = this.state;
     if (disabled) return;
@@ -100,8 +126,15 @@ export default class AcInputTags extends React.Component<Props, State> {
     });
   };
 
+  renderTagTemplate = (args: TemplateArgs) => {
+    const { templateTag } = this.props;
+    const { item, index, items } = args;
+    const cb = () => this.handleTagRemove(index);
+    return templateTag({ item, index, items }, cb);
+  };
+
   render() {
-    const { className, onChange, disabled, ...props } = this.props;
+    const { className, onChange, disabled, templateTag, listPros, ...props } = this.props;
     const { items, inputValue } = this.state;
 
     return (
@@ -111,17 +144,7 @@ export default class AcInputTags extends React.Component<Props, State> {
         onMouseOver={this.handleMouseEnter}
         onClick={this.handleMouseEnter}
         {...props}>
-        {items!.map((item, idx) => {
-          return (
-            <span
-              data-disabled={disabled}
-              className={`${CLASS_NAME}__tag`}
-              onClick={this.handleTagRemove.bind(this, idx, true)}
-              key={idx}>
-              {item}
-            </span>
-          );
-        })}
+        <RcList items={items!} template={this.renderTagTemplate} {...listPros} />
         <input
           disabled={disabled}
           autoFocus
@@ -131,7 +154,7 @@ export default class AcInputTags extends React.Component<Props, State> {
           onInput={this.handleInputChange}
           onKeyDown={this.handleInputKeyAction}
           value={inputValue}
-          className={cx(`${CLASS_NAME}__input`, className)}
+          className={`${CLASS_NAME}__input`}
         />
       </div>
     );
