@@ -1,6 +1,6 @@
 {
   "name": "@jswork/react-input-tags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -36,5 +36,11 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "input",
+    "react",
+    "tags",
+    "group"
+  ]
 }
