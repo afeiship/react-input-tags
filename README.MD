@@ -1,7 +1,2 @@
-# webkit-sassui-layout-tmb
-> webkit sass ui module layout hd/bd/ft.
-
-## usage:
-
-## resources:
-+ https://github.com/afeiship/generator-webkit-sassui
+# react-input-tags
+> React input tags.
