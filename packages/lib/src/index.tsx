@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import noop from '@jswork/noop';
 import cx from 'classnames';
 import fde from 'fast-deep-equal';
@@ -10,6 +10,10 @@ const TRIGGER_KEYS = ['Tab', 'Enter', 'Space'];
 // @ https://cdpn.io/iamqamarali/fullpage/qyawoR?anon=true&view=
 type StdEventTarget = { target: { value: any } };
 type StdCallback = (inEvent: StdEventTarget) => void;
+export type TemplateTagArgs = TemplateArgs & {
+  item: string;
+  disabled?: boolean;
+}
 
 type Props = {
   /**
@@ -36,13 +40,13 @@ type Props = {
    * The template function for rendering each tag.
    * @default (args, cb) => <span className="tag">{args.item}</span>
    */
-  templateTag: (args: TemplateArgs, cb: () => void) => ReactNode;
+  templateTag: (args: TemplateTagArgs, cb: () => void) => ReactNode;
   /**
    * The props of the list component.
    * @default {}
    */
   listPros?: ReactListProps
-} & React.HTMLAttributes<HTMLDivElement>;
+} & HTMLAttributes<HTMLDivElement>;
 
 type State = {
   items?: string[];
@@ -127,14 +131,14 @@ export default class AcInputTags extends React.Component<Props, State> {
   };
 
   renderTagTemplate = (args: TemplateArgs) => {
-    const { templateTag } = this.props;
+    const { templateTag, disabled } = this.props;
     const { item, index, items } = args;
     const cb = () => this.handleTagRemove(index);
-    return templateTag({ item, index, items }, cb);
+    return templateTag({ item, index, items, disabled }, cb);
   };
 
   render() {
-    const { className, onChange, disabled, templateTag, listPros, ...props } = this.props;
+    const { className, onChange, disabled, templateTag, listPros, autoFocus, ...props } = this.props;
     const { items, inputValue } = this.state;
 
     return (
@@ -147,7 +151,7 @@ export default class AcInputTags extends React.Component<Props, State> {
         <RcList items={items!} template={this.renderTagTemplate} {...listPros} />
         <input
           disabled={disabled}
-          autoFocus
+          autoFocus={autoFocus}
           ref={this.inputRef}
           onCompositionStart={() => this.setState({ isComposite: true })}
           onCompositionEnd={() => this.setState({ isComposite: false })}
